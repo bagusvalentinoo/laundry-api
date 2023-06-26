@@ -1,0 +1,30 @@
+{
+  "name": "laundry-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index",
+    "make:migration": "sequelize-cli migration:generate --name",
+    "migrate": "sequelize-cli db:migrate",
+    "migrate:rollback": "sequelize-cli db:migrate:undo:all",
+    "migrate:fresh": "sequelize-cli db:migrate:undo:all && sequelize-cli db:migrate",
+    "migrate:fresh:seed": "sequelize-cli db:migrate:undo:all && sequelize-cli db:migrate && node database/seeders/Seeder",
+    "seeders": "node database/seeders/Seeder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.4.2",
+    "sequelize": "^6.32.1",
+    "sequelize-cli": "^6.6.1",
+    "uuid": "^9.0.0"
+  }
+}
